@@ -14,19 +14,15 @@ public class MyArrayListHomework {
         //Checking if the specific element present
         System.out.println("The list contains the inputet element: " + mylist.contains(5));
 
-
         // Finding maximum element.
         Integer max = mylist.stream().max(Integer::compare).get();
         System.out.println("The maximum element is: " + max);
-
 
         // Finding minimum element
         Integer min = mylist.stream().min(Integer::compare).get();
         System.out.println("The minimum element is:  " + min);
 
-
         // Sorting array list and counting the sum
-
 
         int temp = 0;
         int sum = 0;
@@ -41,28 +37,22 @@ public class MyArrayListHomework {
                     mylist.set(i, mylist.get(j));
                     mylist.set(j, temp);
 
-
                 }
                 sum += mylist.get(i);
 
-
             }
-
 
         }
         System.out.println( "The sorted vesion: ");
         for (int i: mylist) {
             System.out.println(i);
 
-
         }
         System.out.println("The sum is: " + sum);
-
 
         // Removing evens
         mylist.removeIf( num -> num%2==0);
         System.out.println(mylist);
     }
-
 
 }
